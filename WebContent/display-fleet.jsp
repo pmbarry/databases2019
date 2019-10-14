@@ -14,7 +14,7 @@
 <table style= "border: solid 2px red;">
 <tr>
 <td>Vehicle ID</td>
-<td>Vehicle Makes</td>
+<td>Vehicle Make</td>
 <td>Vehicle Model</td>
 <td>Vehicle Registration</td>
 <td>Vehicle Odometer</td>
