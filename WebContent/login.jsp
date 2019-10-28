@@ -13,7 +13,7 @@
 <% 
 try {
 
-String connectionURL = "jdbc:mysql://localhost:3306/FleetManagement"; 
+String connectionURL = "jdbc:mysql://aa16jpqllno762g.cgfmf3c6nnwv.eu-west-1.rds.amazonaws.com:3306/FleetManagement"; 
 Connection connection = null; 
 Class.forName("com.mysql.jdbc.Driver").newInstance(); 
 connection = DriverManager.getConnection(connectionURL,"root","rootpass");

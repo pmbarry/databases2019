@@ -19,28 +19,39 @@ String eircode=request.getParameter("eircode");
 String userid=request.getParameter("userid");
 String password=request.getParameter("password");
 %>
+<%Connection connection = null; 
+%>
 
 <%
 try
 {
-	String connectionURL = "jdbc:mysql://localhost:3306/FleetManagement"; 
-	Connection connection = null; 
+	String connectionURL = "jdbc:mysql://aa16jpqllno762g.cgfmf3c6nnwv.eu-west-1.rds.amazonaws.com:3306/FleetManagement"; 
+	
 	
 	Class.forName("com.mysql.jdbc.Driver").newInstance(); 
 	connection = DriverManager.getConnection(connectionURL,"root","rootpass");
-	 out.println("Connection Opened to database.");
+	out.println("Connection Opened to database.");
    	Statement st=connection.createStatement();
    	
-   	String InsertQuery="insert into employee(emp_id,emp_position,emp_first,emp_surname,emp_add1,emp_add2,emp_city,emp_county,emp_phone,emp_eircode,emp_user,emp_pass,emp_email) values(default,'"+position+"','"+firstname+"','"+surname+"','"+address1+"','"+address2+"','"+city+"','"+county+"','"+phone+"','"+eircode+"','"+userid+"','"+password+"','"+email+"');";
+   	String InsertQuery="insert into employee(emp_id,emp_position,emp_first,emp_surname,emp_add1,emp_add2,emp_city,emp_county,emp_phone,emp_eircode,emp_user,emp_pass,emp_email) values(null,'"+position+"','"+firstname+"','"+surname+"','"+address1+"','"+address2+"','"+city+"','"+county+"','"+phone+"','"+eircode+"','"+userid+"','"+password+"','"+email+"');";
    	
    	
-   	int i=st.executeUpdate(InsertQuery);
+   	int updateQuery=st.executeUpdate(InsertQuery);
+   	if (updateQuery != 0) {%>
+   	<br>
+   	<TABLE style="background-color: #E3E4FA;" width="30%" border="1">
+   	<tr><th>Data is inserted successfully in database.</th></tr>
+   	</table>
+   	out.println("Thank you for register ! Please <a href='index.jsp'>Login</a> to continue.");
+   	<%
+}
 
-out.println("Thank you for register ! Please <a href='index.jsp'>Login</a> to continue.");
+
 }
 catch(Exception e)
 {
 System.out.print(e);
 e.printStackTrace();
 }
+
 %>

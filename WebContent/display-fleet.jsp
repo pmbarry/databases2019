@@ -23,7 +23,7 @@
 try
 {
 Class.forName("com.mysql.jdbc.Driver");
-String url="jdbc:mysql://localhost:3306/FleetManagement";
+String url="jdbc:mysql://aa16jpqllno762g.cgfmf3c6nnwv.eu-west-1.rds.amazonaws.com:3306/FleetManagement";
 String username="root";
 String password="rootpass";
 String query="select * from fleet";

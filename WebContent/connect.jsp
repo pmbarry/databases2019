@@ -14,7 +14,7 @@
 <% 
 try {
 /*here mysqltest is the database name. you have to give the database name you have created and 3306 is the default sql port */
-String connectionURL = "jdbc:mysql://localhost:3306/FleetManagement"; 
+String connectionURL = "jdbc:mysql://aa16jpqllno762g.cgfmf3c6nnwv.eu-west-1.rds.amazonaws.com:3306/FleetManagement"; 
  
 Connection connection = null; 
  

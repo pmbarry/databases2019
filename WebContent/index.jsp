@@ -37,7 +37,7 @@
 <td><input type="reset" value="Reset" /></td>
 </tr>
 <tr>
-<td colspan="2">New User <a href="registerpage.html">Register Here</a></td>
+<td colspan="2">New User <a href="register.html">Register Here</a></td>
 </tr>
 </tbody>
 </table>
